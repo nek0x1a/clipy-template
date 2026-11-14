@@ -22,17 +22,19 @@ wheels = [
 
 [[package]]
 name = "clipy-template"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "rich" },
     { name = "typer" },
+    { name = "typer-config", extra = ["toml"] },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "rich", specifier = ">=15.0.0" },
     { name = "typer", specifier = ">=0.29.1" },
+    { name = "typer-config", extras = ["toml"], specifier = ">=1.5.1" },
 ]
 
 [[package]]
@@ -153,6 +155,15 @@ wheels = [
 ]
 
 [[package]]
+name = "toml"
+version = "0.10.2"
+source = { registry = "https://mirrors.ustc.edu.cn/pypi/simple/" }
+sdist = { url = "https://mirrors.ustc.edu.cn/pypi/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f", size = 22253, upload-time = "2020-11-01T01:40:22.204Z" }
+wheels = [
+    { url = "https://mirrors.ustc.edu.cn/pypi/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b", size = 16588, upload-time = "2020-11-01T01:40:20.672Z" },
+]
+
+[[package]]
 name = "typer"
 version = "0.29.1"
 source = { registry = "https://mirrors.ustc.edu.cn/pypi/simple/" }
@@ -166,6 +177,23 @@ dependencies = [
 sdist = { url = "https://mirrors.ustc.edu.cn/pypi/packages/6c/aa/0de7986aa1fa856adb961c67345189b97d13f6e250b34ba68884df865f07/typer-0.29.1.tar.gz", hash = "sha256:ab6eb3880bf67ce96147734717f9ec333c06f66e361f3ea947d0be43da39f242", size = 205843, upload-time = "2026-11-11T09:18:39.782Z" }
 wheels = [
     { url = "https://mirrors.ustc.edu.cn/pypi/packages/05/ff/51969745f31cea6bcd12151e668febcf979656316e67a7755942267c1273/typer-0.29.1-py3-none-any.whl", hash = "sha256:00dbc549c13428bec1be55fe1f4d0fb8c6637a310e4f178ef14abe9534ee7b58", size = 121064, upload-time = "2026-11-11T09:18:38.671Z" },
+]
+
+[[package]]
+name = "typer-config"
+version = "1.5.1"
+source = { registry = "https://mirrors.ustc.edu.cn/pypi/simple/" }
+dependencies = [
+    { name = "typer" },
+]
+sdist = { url = "https://mirrors.ustc.edu.cn/pypi/packages/21/83/816a6556bb8f4acaa10e908f609557be00f3df2cae98c4216e4b75235c45/typer_config-1.5.1.tar.gz", hash = "sha256:78be341f6894f44d6f2dc6b01f6eef83b9381d16c11341b12d6b8a245a3fb451", size = 10500, upload-time = "2026-03-01T04:44:18.676Z" }
+wheels = [
+    { url = "https://mirrors.ustc.edu.cn/pypi/packages/3b/e1/e51631c3454838faecf73c95dcfbc337654bdef8ac68671973e2ca823265/typer_config-1.5.1-py3-none-any.whl", hash = "sha256:a13bb7d0043231c58e0ec28195a4f54a08116a48b0d61ca49af13f83ef3a846e", size = 13491, upload-time = "2026-03-01T04:44:17.441Z" },
+]
+
+[package.optional-dependencies]
+toml = [
+    { name = "toml" },
 ]
 
 [[package]]

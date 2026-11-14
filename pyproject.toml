@@ -1,14 +1,11 @@
 [project]
 name = "clipy-template"
-version = "0.1.0"
+version = "0.1.1"
 description = "一个 python cli 样板"
 readme = "README.md"
 authors = [{ name = "neko", email = "neko@eroneko.eu.org" }]
 requires-python = ">=3.15"
-dependencies = [
- "rich>=15.0.0",
- "typer>=0.29.1",
-]
+dependencies = ["rich>=15.0.0", "typer>=0.29.1", "typer-config[toml]>=1.5.1"]
 
 [project.scripts]
 clipy-template = "clipy_template:main"

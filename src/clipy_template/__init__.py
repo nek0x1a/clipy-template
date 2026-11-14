@@ -1,11 +1,11 @@
 import typer
 
-from .commands import COMMAND_FUNCTIONS
+from .commands import COMMAND_FUNCTIONS, command_config
 
 app = typer.Typer()
-command_register = app.command()
 for cmd in COMMAND_FUNCTIONS:
-    command_register(cmd)
+    configured_cmd = command_config(cmd.__name__)(cmd)
+    app.command()(configured_cmd)
 
 
 def main() -> None:
