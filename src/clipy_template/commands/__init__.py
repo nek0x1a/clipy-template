@@ -1,6 +1,4 @@
-from .config import command_config
-from .hello import hello
+from .greeting import app as greeting_app
 
-COMMAND_FUNCTIONS = [hello]
-
-__all__ = ["command_config"]
+# 需要自动注册的子 Typer
+COMMAND_APPS = {"greeting": greeting_app}
